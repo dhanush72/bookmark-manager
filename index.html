@@ -34,8 +34,28 @@
       </div>
 
       <nav class="navbar-custom">
-        <ul class="navbar-right list-inline float-right mb-0">
-          <li class="dropdown notification-list list-inline-item">
+        
+
+        <ul class="navbar-right list-inline text-center mb-0">
+          <li class="float-left">
+            <button class="button-menu-mobile open-left waves-effect">
+              <i class="mdi mdi-menu"></i>
+            </button>
+          </li>
+          
+          <li class="dropdown notification-list  list-inline-item">
+            <div class="dropdown notification-list nav-pro-img">
+              <a class="dropdown-toggle nav-link add-btn arrow-none nav-user" href="add.html" role="button"
+                aria-haspopup="false" aria-expanded="false">
+                <button type="button" class="btn btn-secondary btn-lg waves-effect waves-light">
+                  <span class="float-right menu-arrow"><i class="fas fa-plus-circle fa-1x"></i>
+                    Add
+                </button>
+              </a>
+            </div>
+          </li>
+          
+          <li class="dropdown notification-list float-right list-inline-item">
             <div class="dropdown notification-list nav-pro-img">
               <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button"
                 aria-haspopup="false" aria-expanded="false">
@@ -45,13 +65,13 @@
           </li>
         </ul>
 
-        <ul class="list-inline menu-left mb-0">
+        <!-- <ul class="list-inline menu-left mb-0">
           <li class="float-left">
             <button class="button-menu-mobile open-left waves-effect">
               <i class="mdi mdi-menu"></i>
             </button>
           </li>
-        </ul>
+        </ul> -->
       </nav>
     </div>
     <!-- Top Bar End -->
@@ -70,18 +90,12 @@
                   Using
                   <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
               <ul class="submenu">
-                <!-- <li><a href="" onclick="getData();" target="_blank">Yahoo Mails
-                    <form name="form" action="https://login.yahoo.com/" target="TheWindow">
-                      <input type="text" name="username" id="login-username" value="hr@lmits.in" />
-                      
-                    </form>
-                  </a> -->
 
-                  <form action="https://login.yahoo.com/" target="TheWindow">
+                  <form action="https://login.yahoo.com/" class="text-center" target="TheWindow">
                     <input type="text" name="username" id="login-username" value="hr@lmits.in" />
                     
                     <input
-                      class="btn waves-effect"
+                      class="btn waves-effect text-white"
                       type="submit"
                       value="Yahoo Mails"
                       onclick="getData();"
@@ -126,27 +140,13 @@
         <div class="container-fluid">
           <div class="page-title-box">
             <div class="row align-items-center">
-              <div class="col-sm-12">
+              <div class="col-sm-12 col-md-4">
                 <div class="container">
-                  <div class="row mt-5 justify-content-center">
-                    <div class="col-lg-7">
-                      <div class="text-center ">
-                        <div class="maintenance-img mb-5">
-                          <img src="assets/images/chatbot.svg" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-
-                        <a href="add.html">
-                          <button type="button" class="btn btn-secondary btn-lg waves-effect waves-light">
-                            <span class="float-right menu-arrow"><i class="fas fa-plus-circle fa-1x"></i>
-                              Add
-                          </button>
-                        </a>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  <!-- end row -->
+                  
+                  <div class="card  card-body">
+                    <h4 class="card-title font-16 mt-0 mb-4">Yahoo Mails</h4>
+                    <a id='click' href="https://login.yahoo.com/?username=hr%40lmits.in" target="_blank" class="btn btn-primary">open</a>
+                </div>
 
                 </div>
               </div>
@@ -189,6 +189,10 @@
     }
     document.form.loginemail.value = localStorage.getItem("email");
     document.form.loginpassword.value = localStorage.getItem("password");
+
+    $("##click").on('click', function() {
+      getData();
+    });
   </script>
 
 </body>

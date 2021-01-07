@@ -897,6 +897,10 @@ dt {
   left: auto !important;
 }
 
+.notification-list.list-inline-item:nth-child(1) {
+  margin-right: 2rem;
+}
+
 .notification-list.list-inline-item:not(:last-child) {
   margin-right: 0;
 }
